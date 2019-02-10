@@ -9,8 +9,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import pl.sda.openweather.model.Weather;
+import javafx.scene.image.ImageView;
 
-import javax.swing.text.html.ImageView;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -49,8 +49,8 @@ public class RootController implements Initializable {
             Weather weather = objectMapper.readValue(jsonURL, Weather.class);
             feelTempResult.setText(String.valueOf(weather.getCurrent().getFeelslike_c()));
             tempResult.setText(String.valueOf(weather.getCurrent().getTemp_c()));
-            Image image = new Image(weather.getCurrent().getCondition().getIcon());
-            System.out.println(image);
+            Image image = new Image("http:" + weather.getCurrent().getCondition().getIcon());
+
             weatherImage.setImage(image);
 
 
