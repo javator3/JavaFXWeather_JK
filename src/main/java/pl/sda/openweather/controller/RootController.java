@@ -2,7 +2,7 @@ package pl.sda.openweather.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
+    import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -49,7 +49,7 @@ public class RootController implements Initializable {
             Weather weather = objectMapper.readValue(jsonURL, Weather.class);
             feelTempResult.setText(String.valueOf(weather.getCurrent().getFeelslike_c()));
             tempResult.setText(String.valueOf(weather.getCurrent().getTemp_c()));
-            Image image = new Image("http:" + weather.getCurrent().getCondition().getIcon());
+            Image image = new Image("http:" + weather.getCurrent().getCondition().getIcon(),true);
 
             weatherImage.setImage(image);
 
@@ -59,6 +59,4 @@ public class RootController implements Initializable {
         }
 
     }
-
-
 }

@@ -12,13 +12,13 @@ public class Main extends Application {
         launch(args);
     }
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/root.fxml"));
-        primaryStage.setTitle("WeatherCast");
-//        primaryStage.setResizable(false);
-        primaryStage.setScene(new Scene(root, 600, 350));
-        primaryStage.show();
+        @Override
+        public void start(Stage primaryStage) throws Exception {
+            Parent root = FXMLLoader.load(getClass().getResource("/root.fxml"));
+            primaryStage.setTitle("WeatherCast");
+    //        primaryStage.setResizable(false);
+            primaryStage.setScene(new Scene(root, 640, 400));
+            primaryStage.show();
 
     }
 }
